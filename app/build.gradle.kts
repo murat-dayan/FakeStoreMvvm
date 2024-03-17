@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id ("com.google.dagger.hilt.android")
+    id ("kotlin-kapt")
 }
 
 android {
@@ -49,4 +51,19 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    //Retrofit
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    //Dagger Hilt
+    implementation ("com.google.dagger:hilt-android:2.49")
+    kapt ("com.google.dagger:hilt-compiler:2.49")
+
+    //viewmodel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
+
+    // saved state
+    implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0")
 }
