@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.createSavedStateHandle
 import androidx.navigation.NavController
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Recycler
@@ -41,6 +42,7 @@ class ProductsAdapter(
     override fun onBindViewHolder(holder: CardViewHolder, position: Int) {
 
         val product = products[position]
+
         val cardBind = holder.binding
         cardBind.cardViewPriceId.text = product.price.toString()
         cardBind.cardViewRatingTextId.text = product.rating.toString()
