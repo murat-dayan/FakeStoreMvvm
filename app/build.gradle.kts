@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id ("com.google.dagger.hilt.android")
     id ("kotlin-kapt")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -48,6 +49,8 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -66,4 +69,7 @@ dependencies {
 
     // saved state
     implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0")
+
+    // glide
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
 }

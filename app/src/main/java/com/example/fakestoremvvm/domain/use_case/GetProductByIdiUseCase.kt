@@ -3,7 +3,7 @@ package com.example.fakestoremvvm.domain.use_case
 import com.example.fakestoremvvm.domain.repository.ProductRepository
 import javax.inject.Inject
 
-class GetProductById @Inject constructor(
+class GetProductByIdiUseCase @Inject constructor(
     private val productRepository: ProductRepository
 ) {
 
